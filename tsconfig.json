@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "target": "esnext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "strict": true,
-    "sourceMap": true,
     "incremental": true,
     "declaration": true,
     "outDir": "dist",
     "experimentalDecorators": true,
     "baseUrl": "./src",
+    "rootDir": "src/",
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": [
     "node_modules",
     "dist",
     "examples",
-    "scripts"
+    "scripts",
+    "rollup.config.ts",
+    "src/__tests__"
   ]
 }
