@@ -1,5 +1,6 @@
 import {
-  ANTLRInputStream,
+  CharStreams,
+  CodePointCharStream,
   CommonTokenStream,
   Token,
   BailErrorStrategy,
@@ -52,7 +53,7 @@ export interface ParseResult {
   /** The token stream that was fed into the parser */
   tokenStream: CommonTokenStream
   /** The input stream that was fed into the lexer */
-  inputStream: ANTLRInputStream
+  inputStream: CodePointCharStream
   /** The generated MySQL parser */
   parser: MySQLParser
   /** The generated MySQL lexer */
@@ -121,7 +122,7 @@ export default class Parser {
    * @returns ParseResult
    */
   public parse(query: string, context: RuleName = RuleName.query): ParseResult {
-    const inputStream = new ANTLRInputStream(query)
+    const inputStream = CharStreams.fromString(query)
     const lexer = new MySQLLexer(inputStream)
     const tokenStream = new CommonTokenStream(lexer)
     const parser = new MySQLParser(tokenStream)
@@ -163,7 +164,7 @@ export default class Parser {
     try {
       tree = parser[context]()
     } catch (e) {
-      inputStream.reset()
+      inputStream.consume()
       lexerErrorListener.error = undefined
       parserErrorListener.error = undefined
       parser.errorHandler = new DefaultErrorStrategy()

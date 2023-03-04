@@ -1,5 +1,5 @@
 import MySQLParser, { MySQLParserListener } from '../src'
-import { RuleContext } from 'antlr4ts'
+import type { RuleContext } from 'antlr4ts'
 
 class ParserListener implements MySQLParserListener {
   exitEveryRule(ctx: RuleContext): void {
