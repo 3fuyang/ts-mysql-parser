@@ -22,7 +22,7 @@
     "dist",
     "examples",
     "scripts",
-    "rollup.config.ts",
+    "build.ts",
     "src/__tests__"
   ]
 }
