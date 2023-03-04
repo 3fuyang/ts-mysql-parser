@@ -1,7 +1,9 @@
-import 'node:assert'
-import 'node:url'
-import 'node:process'
 import parser from './parser'
+import assert from 'assert'
+import url from 'url'
+
+assert
+url
 
 export default parser
 
