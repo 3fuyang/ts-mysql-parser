@@ -1,12 +1,12 @@
 {
-  "name": "ts-mysql-parser",
-  "version": "0.2.0",
+  "name": "@fwio/ts-mysql-parser",
+  "version": "0.0.0",
   "description": "A standalone, grammar-complete MySQL parser.",
   "license": "MIT",
-  "repository": "stevenmiller888/ts-mysql-parser",
-  "author": "Steven Miller (https://github.com/stevenmiller888)",
+  "repository": "3fuyang/ts-mysql-parser",
+  "author": "Fwio (https://github.com/3fuyang)",
   "engines": {
-    "node": ">=12.13"
+    "node": ">=18.13"
   },
   "type": "module",
   "keywords": [
