@@ -601,7 +601,7 @@
   "resolved" "https://registry.npmjs.org/@jridgewell/set-array/-/set-array-1.1.2.tgz"
   "version" "1.1.2"
 
-"@jridgewell/sourcemap-codec@^1.4.10", "@jridgewell/sourcemap-codec@1.4.14":
+"@jridgewell/sourcemap-codec@^1.4.10", "@jridgewell/sourcemap-codec@^1.4.13", "@jridgewell/sourcemap-codec@1.4.14":
   "integrity" "sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw=="
   "resolved" "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz"
   "version" "1.4.14"
@@ -634,6 +634,15 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
+
+"@rollup/plugin-inject@^5.0.1":
+  "integrity" "sha512-411QlbL+z2yXpRWFXSmw/teQRMkXcAAC8aYTemc15gwJRpvEVDQwoe+N/HTFD8RFG8+88Bme9DK2V9CVm7hJdA=="
+  "resolved" "https://registry.npmjs.org/@rollup/plugin-inject/-/plugin-inject-5.0.3.tgz"
+  "version" "5.0.3"
+  dependencies:
+    "@rollup/pluginutils" "^5.0.1"
+    "estree-walker" "^2.0.2"
+    "magic-string" "^0.27.0"
 
 "@rollup/plugin-json@^6.0.0":
   "integrity" "sha512-i/4C5Jrdr1XUarRhVu27EEwjt4GObltD7c+MkCIpO2QIbojw8MUs+CCTqOphQi3Qtg1FLmYt+l+6YeoIf51J7w=="
@@ -3380,6 +3389,13 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"magic-string@^0.27.0":
+  "integrity" "sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA=="
+  "resolved" "https://registry.npmjs.org/magic-string/-/magic-string-0.27.0.tgz"
+  "version" "0.27.0"
+  dependencies:
+    "@jridgewell/sourcemap-codec" "^1.4.13"
+
 "make-dir@^3.0.0":
   "integrity" "sha512-rYKABKutXa6vXTXhoV18cBE7PaewPXHe/Bdq4v+ZLMhxbWApkFFplT0LcbMW+6BbjnQXzZ/sAvSE/JdguApG5w=="
   "resolved" "https://registry.npmjs.org/make-dir/-/make-dir-3.0.2.tgz"
@@ -4170,6 +4186,13 @@
     "es-module-lexer" "^1.0.5"
     "joycon" "^3.1.1"
     "jsonc-parser" "^3.2.0"
+
+"rollup-plugin-polyfill-node@^0.12.0":
+  "integrity" "sha512-PWEVfDxLEKt8JX1nZ0NkUAgXpkZMTb85rO/Ru9AQ69wYW8VUCfDgP4CGRXXWYni5wDF0vIeR1UoF3Jmw/Lt3Ug=="
+  "resolved" "https://registry.npmjs.org/rollup-plugin-polyfill-node/-/rollup-plugin-polyfill-node-0.12.0.tgz"
+  "version" "0.12.0"
+  dependencies:
+    "@rollup/plugin-inject" "^5.0.1"
 
 "rollup@^1.20.0 || ^2.0.0 || ^3.0.0", "rollup@^1.20.0||^2.0.0||^3.0.0", "rollup@^2.14.0||^3.0.0", "rollup@^3.18.0":
   "integrity" "sha512-J8C6VfEBjkvYPESMQYxKHxNOh4A5a3FlP+0BETGo34HEcE4eTlgCrO2+eWzlu2a/sHs2QUkZco+wscH7jhhgWg=="
