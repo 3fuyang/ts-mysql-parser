@@ -1,9 +1,4 @@
 import parser from './parser'
-import assert from 'assert'
-import url from 'url'
-
-assert
-url
 
 export default parser
 
